@@ -12,14 +12,14 @@ const createDate = (arrData, position) => {
   let arrHasil = [];
   if(position !== undefined){
     for (let index = 0; index < arrData.length; index++) {
-      const element = Date.parse(arrData[index]);
-      arrHasil.push(element);
+      // const element = Date.parse(arrData[index]);
+      arrHasil.push(Date.parse(arrData[index]));
     }
     return arrData[position].toString().slice(0,10);
   }else {
     for (let index = 0; index < arrData.length; index++) {
-      const element = Date.parse(arrData[index]).toString().slice(0,10);
-      arrHasil.push(element);
+      // const element = Date.parse(arrData[index]).toString().slice(0,10);
+      arrHasil.push(Date.parse(arrData[index]).toString().slice(0,10));
     }
     return arrHasil.sort().join('-');
   }
